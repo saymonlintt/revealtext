@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Text</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--Biblioteca Pdf.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js" integrity="sha512-hoZmP5l0sJQzHzkXQS3ZCj/H7bOn8JKmbHd/s2trPUoMcvPaBfLSE9/92cpwYzcXBaEtVT/aCQ9P97rkTSWqcw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <button id="toggle" class="button">Cor de fundo</button>
+    </div>
+    <div id="insert">
+        <h1>Reveal Text</h1>
+        <div>
+            <h6 id="subtitle">Press [z] to reveal</h6>
+            <input type="file" id="pdf-input" accept=".pdf">
+            <label for="pdf-input" id="custom-pdf-label">Carregar PDF</label>
+            <button id="reloadButton">Recarregar Página</button>
+        </div>
+    </div>
+    <div id="reveal">
+        <textarea name="space" id="pdf-content"></textarea>
+        <br>
+        <button id="botaoEnviar">To reveal</button>
+        <pre id="palavrasReveladas"></pre>
+        <script src="script.js"></script>
+    </div>
+    
+</body>
+</html>
