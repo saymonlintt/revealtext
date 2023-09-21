@@ -20,6 +20,7 @@ body{
     --bg-blue-dark: #142136;
 
     background-color: var(--bg-grey-light);
+    --text-shadow: 4px 4px black;
 }
 
 .dark {
@@ -49,7 +50,8 @@ body{
 
 #insert h1{
     text-align: center;
-    
+    color: var(--text-white);
+    color: var(--text-dark);
 } 
 
 #reveal button{
@@ -192,7 +194,8 @@ body{
 
 #insert h1{
     text-align: center;
-    
+    color: var(--text-white);
+    color: var(--text-dark);
 } 
 
 #reveal button{
