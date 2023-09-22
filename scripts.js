@@ -29,10 +29,18 @@ toggle.addEventListener("click", () => {
     }
 });
 
+// Funções do botão 'To reveal'
+
 botaoEnviar.addEventListener('click', function () {
     var conteudo = textoRevelado.value;
     textoRevelado.value = ''; 
     mostrarMaisPalavras(); // Começa a revelar imediatamente ao clicar no botão
+});
+
+botaoEnviar.addEventListener('click', function () {
+    if (botaoEnviar) {
+        mostrarMaisPalavras();
+    }
 });
 
 // Recarregar a página
@@ -99,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 }
                                 pdfText += textItem.str + "";
                             });
-                            console.log(pdfText)
+                            
 
                             // Continua lendo as páginas subsequentes
                             readPage(pageNum + 1);
@@ -115,6 +123,22 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.readAsArrayBuffer(file);
     }
 });
+
+// Variável para controlar se a tecla 'z' está pressionada
+let zKeyPressed = false;
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'z' && !zKeyPressed) {
+        mostrarMaisPalavras();
+    }
+});
+
+document.addEventListener('keyup', function (event) {
+    if (event.key === 'z') {
+        mostrarMaisPalavras();
+    }
+});
+
 
 
 // Função para mostrar mais palavras
@@ -132,13 +156,3 @@ function mostrarMaisPalavras() {
         botaoEnviar.style.display = 'none';
     }
 }
-
-// Variável para controlar se a tecla 'z' está pressionada
-let zKeyPressed = false;
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'z') {
-        zKeyPressed = true;
-        mostrarMaisPalavras();
-    }
-});
