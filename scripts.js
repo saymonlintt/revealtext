@@ -31,9 +31,8 @@ toggle.addEventListener("click", () => {
 
 botaoEnviar.addEventListener('click', function () {
     var conteudo = textoRevelado.value;
-    // Não é necessário dividir o texto aqui
-    textoRevelado.value = ''; // Limpar o conteúdo atual
-    mostrarMaisPalavras(); // Comece a revelar imediatamente ao clicar no botão
+    textoRevelado.value = ''; 
+    mostrarMaisPalavras(); // Começa a revelar imediatamente ao clicar no botão
 });
 
 // Recarregar a página
