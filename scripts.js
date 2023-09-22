@@ -29,13 +29,7 @@ toggle.addEventListener("click", () => {
     }
 });
 
-// Funções do botão 'To reveal'
-
-botaoEnviar.addEventListener('click', function () {
-    var conteudo = textoRevelado.value;
-    textoRevelado.value = ''; 
-    mostrarMaisPalavras(); // Começa a revelar imediatamente ao clicar no botão
-});
+// botão 'To reveal'
 
 botaoEnviar.addEventListener('click', function () {
     if (botaoEnviar) {
@@ -51,6 +45,11 @@ reloadButton.addEventListener('click', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Clicar na tela e exibir novas palavras
+    document.documentElement.addEventListener('click', function () {
+        mostrarMaisPalavras();
+    });
+    
     const fileInput = document.getElementById('pdf-input');
 
     fileInput.addEventListener('change', function (event) {
@@ -139,8 +138,6 @@ document.addEventListener('keyup', function (event) {
     }
 });
 
-
-
 // Função para mostrar mais palavras
 function mostrarMaisPalavras() {
     if (indice < palavras.length) {
@@ -153,6 +150,5 @@ function mostrarMaisPalavras() {
         indice++;
     } else {
         textoRevelado.style.display = 'none';
-        botaoEnviar.style.display = 'none';
     }
 }
