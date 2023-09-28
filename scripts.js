@@ -74,6 +74,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let pdfDoc = null;
 
+    pdfInput.addEventListener("change", function () {
+        const selectedFile = pdfInput.files[0];
+        if (selectedFile) {
+            // Mostrar a animação de carregamento
+            const loadingAnimation = document.getElementById('loading');
+            loadingAnimation.style.display = 'block';
+    
+            // Aguardar 900 milisegundos antes de carregar e exibir o PDF
+            setTimeout(function () {
+                readAndDisplayPdf(selectedFile);
+                loadingAnimation.style.display = 'none';
+            }, 900);
+        }
+    });
+    
     // Função para ler e exibir o conteúdo do PDF
     function readAndDisplayPdf(file) {
         const reader = new FileReader();
