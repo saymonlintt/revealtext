@@ -20,6 +20,7 @@ body{
     --bg-blue-dark: #142136;
 
     background-color: var(--bg-grey-light);
+    --text-shadow: 4px 4px black;
 }
 
 .dark {
@@ -143,6 +144,57 @@ body{
 #pdf-input{
     display: none;
 }
+
+/*Loading Animation*/
+
+#loading {
+    display: none;
+    position: fixed; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.ring {
+    --uib-size: 50px;
+    --uib-speed: 1.3s;
+    --uib-color: black;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    vertical-align: middle;
+    transform-origin: center;
+    animation: rotate var(--uib-speed) linear infinite;
+}
+
+.ring circle {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+}
+  
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+@keyframes stretch {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dashoffset: -124px;
+    }
+}
+  
 }
 
 @media only screen and (max-width: 560px){
@@ -283,5 +335,55 @@ body{
     
 #pdf-input{
     display: none;
+}
+
+/*Loading Animation*/
+
+#loading {
+    display: none;
+    position: fixed; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.ring {
+    --uib-size: 50px;
+    --uib-speed: 1.3s;
+    --uib-color: black;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    vertical-align: middle;
+    transform-origin: center;
+    animation: rotate var(--uib-speed) linear infinite;
+}
+
+.ring circle {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+}
+  
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+@keyframes stretch {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dashoffset: -124px;
+    }
 }
 }
