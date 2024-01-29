@@ -1,6 +1,6 @@
 # Reveal Text
 
-Oi, tudo bem? Quero te apresentar o Reveal Text. Sabe quando você está lendo um texto, mas acaba se perdendo no meio de um parágrafo enorme ou pulando para o final? Pois é, então eu criei essa aplicação pensando exatamente nisso!
+Oi, tudo bem? Quero te apresentar o Reveal Text. Sabe quando você está lendo um texto, mas acaba se perdendo no meio de um parágrafo enorme ou pulando para o final? Foi pensando nisso que eu criei essa aplicação
 
 Com o Reveal Text, você pode ler seu PDF palavra por palavra, apenas com o clique do botão 'z' no seu teclado ou clicando na tela em dispositivos móveis. Assim, fica mais fácil se concentrar em cada detalhe e entender tudo antes de passar para a próxima parte.
 
